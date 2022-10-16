@@ -1,12 +1,18 @@
 package com.geektech.notesapi.domain.model
 
-data class Note (
-    val id:Int=DEFAULT_ID,
-    val tittle:String,
-    val text:String
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import java.io.Serializable
 
-){
+@Entity
+data class Note (
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = Default_ID,
+    var tittle: String,
+    var text: String
+): Serializable {
+    constructor():this(0,"","")
     companion object{
-        const val DEFAULT_ID=0
+        const val Default_ID = 0
     }
 }

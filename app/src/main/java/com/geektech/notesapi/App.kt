@@ -7,7 +7,7 @@ import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
 class App: Application() {
-    companion object{
+   /* companion object{
         lateinit var roomNoteDatabase:NoteDatabase
     }
 
@@ -20,5 +20,5 @@ class App: Application() {
             "note_db"
         ).allowMainThreadQueries().build()
 
-    }
+    }*/
 }
